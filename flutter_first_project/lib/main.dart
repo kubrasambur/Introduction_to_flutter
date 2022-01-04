@@ -8,58 +8,30 @@ void main() {
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
+  Container containerOlustur(String harf, Color renk, {double margin = 0}) {
+    return Container(
+      alignment: Alignment.center,
+      width: 75,
+      height: 75,
+      color: renk,
+      margin: EdgeInsets.only(top: margin),
+      child: Text(
+        harf,
+        style: TextStyle(
+          fontSize: 55,
+        ),
+      ),
+    );
+  }
+
   Row dartRowunuOlustur() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade200,
-          child: Text(
-            "D",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade400,
-          child: Text(
-            "A",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade600,
-          child: Text(
-            "R",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade800,
-          child: Text(
-            "T",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        )
+        containerOlustur("D", Colors.orange.shade200),
+        containerOlustur("A", Colors.orange.shade400),
+        containerOlustur("R", Colors.orange.shade600),
+        containerOlustur("T", Colors.orange.shade800),
       ],
     );
   }
@@ -68,91 +40,13 @@ class MyApp extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.orange.shade200,
-          child: Text(
-            "E",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade300,
-          child: Text(
-            "R",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade400,
-          child: Text(
-            "S",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade500,
-          child: Text(
-            "L",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade600,
-          child: Text(
-            "E",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade700,
-          child: Text(
-            "R",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: 75,
-          height: 75,
-          color: Colors.orange.shade800,
-          child: Text(
-            "İ",
-            style: TextStyle(
-              fontSize: 55,
-            ),
-          ),
-        ),
+        containerOlustur("E", Colors.orange.shade200, margin: 15),
+        containerOlustur("R", Colors.orange.shade300),
+        containerOlustur("S", Colors.orange.shade400),
+        containerOlustur("L", Colors.orange.shade500),
+        containerOlustur("E", Colors.orange.shade600),
+        containerOlustur("R", Colors.orange.shade700),
+        containerOlustur("İ", Colors.orange.shade800),
       ],
     );
   }
